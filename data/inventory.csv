@@ -1,2 +1,12 @@
-itemId,itemName,quantity,price,category,minimumStockLevel
-I001,Mouse,75,499.99,Electronics,10
+I001,Wireless Mouse,75,499.0,Electronics,10
+I002,Mechanical Keyboard,18,2999.0,Electronics,8
+I003,Dell Monitory 24",6,11999.0,Electronics,5
+I004,HP Laser Printer Toner,3,4899.0,Consumables,8
+I005,HDMI Cable,120,399.0,Accessories,25
+1006,USB Flash Drive 64GB,30,699.0,Storage,15
+1007,Office Chair,4,7499.0,Furniture,6
+I008,Laptop Stand,14,1499.0,Accessories,8
+I009,Network Switch (24 Port),2,8999.0,Networking,4
+I010,Logitech Webcam,16,2599.0,Electronics,5
+I011,A4 Printer Paper (500 Sheets),8,350.0,Stationery,20
+I012,External SSD 1TB,5,7999.0,Storage,4

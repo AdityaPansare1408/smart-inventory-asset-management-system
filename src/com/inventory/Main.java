@@ -1,13 +1,14 @@
 package com.inventory;
 
-import com.inventory.model.Item;
-import com.inventory.service.InventoryService;
+import com.inventory.ui.DashboardUI;
+import javax.swing.SwingUtilities;
 
 public class Main {
-
     public static void main(String[] args) {
-        InventoryService inventoryService = new InventoryService();
-
-        inventoryService.displayInventorySummary();
+        // Run GUI on Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+            DashboardUI dashboard = new DashboardUI();
+            dashboard.setVisible(true);
+        });
     }
 }

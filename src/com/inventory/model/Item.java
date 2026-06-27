@@ -1,83 +1,36 @@
 package com.inventory.model;
 
 public class Item {
-
-    private String itemId;
-    private String itemName;
+    private String id;
+    private String name;
     private int quantity;
     private double price;
     private String category;
-    private int minimumStockLevel;
+    private int minimumStock;
 
-    public Item(String itemId,
-                String itemName,
-                int quantity,
-                double price,
-                String category,
-                int minimumStockLevel) {
-
-        this.itemId = itemId;
-        this.itemName = itemName;
+    public Item(String id, String name, int quantity, double price, String category, int minimumStock) {
+        this.id = id;
+        this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.category = category;
-        this.minimumStockLevel = minimumStockLevel;
-
+        this.minimumStock = minimumStock;
     }
 
-    public String getItemId() {
-        return itemId;
-    }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public int getQuantity() { return quantity; }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+    public int getMinimumStock() { return minimumStock; }
+    public void setMinimumStock(int minimumStock) { this.minimumStock = minimumStock; }
 
-    public String getItemName() {
-        return itemName;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public int getMinimumStockLevel() {
-        return minimumStockLevel;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setMinimumStockLevel(int minimumStockLevel) {
-        this.minimumStockLevel = minimumStockLevel;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" +
-                "itemId='" + itemId + '\'' +
-                ", itemName='" + itemName + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                ", category='" + category + '\'' +
-                ", minimumStockLevel=" + minimumStockLevel +
-                '}';
+    public String toCSV() {
+        return id + "," + name + "," + quantity + "," + price + "," + category + "," + minimumStock;
     }
 }

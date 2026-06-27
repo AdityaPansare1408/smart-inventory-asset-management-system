@@ -1,75 +1,37 @@
 package com.inventory.repository;
 
 import com.inventory.model.Item;
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class InventoryRepository {
-    public void saveItems(List<Item> items) {
-        try (FileWriter writer = new FileWriter("data/inventory.csv")) {
+    private final String FILE_PATH = "data/inventory.csv";
 
-            writer.write(
-                    "itemId,itemName,quantity,price,category,minimumStockLevel\n"
-            );
+    public List<Item> loadAll() {
+        List<Item> items = new ArrayList<>();
+        File file = new File(FILE_PATH);
+        if (!file.exists()) return items;
 
-            for (Item item : items) {
-
-                writer.write(
-                        item.getItemId() + "," +
-                                item.getItemName() + "," +
-                                item.getQuantity() + "," +
-                                item.getPrice() + "," +
-                                item.getCategory() + "," +
-                                item.getMinimumStockLevel() + "\n"
-                );
-
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 6) {
+                    items.add(new Item(parts[0], parts[1], Integer.parseInt(parts[2]),
+                            Double.parseDouble(parts[3]), parts[4], Integer.parseInt(parts[5])));
+                }
             }
-
-        } catch (IOException e) {
-
-            e.printStackTrace();
-
-        }
+        } catch (IOException e) { e.printStackTrace(); }
+        return items;
     }
 
-    public List<Item> loadItems() {
-
-        List<Item> items = new ArrayList<>();
-
-        try (BufferedReader reader =
-                     new BufferedReader(
-                             new FileReader("data/inventory.csv"))) {
-
-            // Skip CSV header
-            reader.readLine();
-
-            String line;
-
-            while ((line = reader.readLine()) != null) {
-
-                String[] data = line.split(",");
-
-                Item item = new Item(
-                        data[0],
-                        data[1],
-                        Integer.parseInt(data[2]),
-                        Double.parseDouble(data[3]),
-                        data[4],
-                        Integer.parseInt(data[5])
-                );
-
-                items.add(item);
+    public void saveAll(List<Item> items) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH))) {
+            for (Item item : items) {
+                bw.write(item.toCSV());
+                bw.newLine();
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return items;
+        } catch (IOException e) { e.printStackTrace(); }
     }
 }
