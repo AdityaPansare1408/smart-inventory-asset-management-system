@@ -360,7 +360,7 @@ git clone https://github.com/AdityaPansare1408/smart-inventory-asset-management-
 
 ## Open Project
 
-Open the project in IntelliJ IDEA.
+Open the project in IDE.
 
 Ensure the `data` folder is present in the project root so that inventory and asset data can be loaded correctly.
 
