@@ -1,11 +1,11 @@
 # Smart Inventory & Asset Management System
 
-> **Enterprise-style Java Swing desktop application for Inventory and Asset Management featuring layered architecture, CSV persistence, inventory analytics, restock prioritization, asset health evaluation, and preventive maintenance scheduling.**
-
 ![Java](https://img.shields.io/badge/Java-17-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Architecture](https://img.shields.io/badge/Architecture-Layered-blue)
-![Persistence](https://img.shields.io/badge/Persistence-CSV-yellow)
+![Swing](https://img.shields.io/badge/Swing-Desktop_App-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Layered-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+> **Enterprise-style Java Swing desktop application for Inventory and Asset Management featuring layered architecture, CSV persistence, inventory analytics, restock prioritization, asset health evaluation, and preventive maintenance scheduling.**
 
 ---
 
