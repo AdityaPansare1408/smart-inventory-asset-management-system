@@ -429,9 +429,6 @@ This project demonstrates practical implementation of:
 
 M.Tech in Computer Engineering
 
-GitHub:
-https://github.com/AdityaPansare1408
-
 ---
 
 ## License
