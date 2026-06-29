@@ -2,6 +2,11 @@
 
 > **Enterprise-style Java Swing desktop application for Inventory and Asset Management featuring layered architecture, CSV persistence, inventory analytics, restock prioritization, asset health evaluation, and preventive maintenance scheduling.**
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Architecture](https://img.shields.io/badge/Architecture-Layered-blue)
+![Persistence](https://img.shields.io/badge/Persistence-CSV-yellow)
+
 ---
 
 ## Overview
@@ -384,22 +389,6 @@ The application launches directly into the Inventory Management dashboard.
 
 ---
 
-# Future Enhancements
-
-- JDBC Integration
-- MySQL Database
-- DAO Pattern
-- Transaction Management
-- Advanced Search & Filtering
-- Spring Boot REST API
-- Role-Based Authentication
-- JWT Authentication
-- Report Export (PDF / Excel)
-- Email Notifications
-- Docker Deployment
-
----
-
 # Learning Outcomes
 
 This project demonstrates practical implementation of:
@@ -415,6 +404,22 @@ This project demonstrates practical implementation of:
 * Data Validation
 * Preventive Maintenance Scheduling
 * Git & GitHub Version Control
+
+---
+
+# Future Enhancements
+
+- JDBC Integration
+- MySQL Database
+- DAO Pattern
+- Transaction Management
+- Advanced Search & Filtering
+- Spring Boot REST API
+- Role-Based Authentication
+- JWT Authentication
+- Report Export (PDF / Excel)
+- Email Notifications
+- Docker Deployment
 
 ---
 
